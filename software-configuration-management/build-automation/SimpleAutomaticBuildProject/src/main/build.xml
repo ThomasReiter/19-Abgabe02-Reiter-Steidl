@@ -5,8 +5,8 @@
 		<mkdir dir="build"/>
 	</target>
 
-    <target name="clean">
-        <delete dir="build"/>
+    <target name="clean"> //clean clears the dir that is made by init
+		<delete dir="build"/>
     </target>
 
     <target name="compile">
