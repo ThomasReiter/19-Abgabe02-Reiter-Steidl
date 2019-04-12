@@ -17,7 +17,7 @@
     </target>
 
     <target name="jar">
-        <mkdir dir="build/jar"/>
+        <mkdir dir="build/jar"/> <!-- creates jar file  -->
         <jar destfile="build/jar/Main.jar" basedir="build/classes">
             <manifest>
                 <attribute name="Main-Class" value="at.fhj.iit.Main"/>
