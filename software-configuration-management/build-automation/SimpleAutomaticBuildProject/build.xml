@@ -11,7 +11,7 @@
 		<delete dir="build"/>
     </target>
 
-    <target name="compile"> <!--compiles the src folder in another foler, creating a class file-->
+    <target name="compile">
 		<mkdir dir="build/classes"/>
         <javac srcdir="src" destdir="build/classes" includeantruntime="false"/>
     </target>
