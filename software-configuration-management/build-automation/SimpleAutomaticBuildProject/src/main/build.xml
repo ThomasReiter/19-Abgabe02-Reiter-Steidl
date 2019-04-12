@@ -1,0 +1,29 @@
+
+<project name="SimpleAutomaticBuildProject">
+
+	<target name="init">
+		<mkdir dir="build"/>
+	</target>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/Main.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="at.fhj.iit.Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="Main.jar" fork="true"/>
+    </target>
+
+</project>
