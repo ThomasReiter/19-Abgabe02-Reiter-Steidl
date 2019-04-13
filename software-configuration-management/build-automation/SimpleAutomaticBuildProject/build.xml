@@ -8,7 +8,8 @@
     <property name="jar.dir"     value="${build.dir}/jar"/>
 
     <property name="main-class"  value="at.fhj.iit.Main"/>
-
+	
+	
 	<target name="init"> <!-- init creates a directory-->
 		<mkdir dir="${build.dir}"/>
 	</target>
@@ -34,7 +35,9 @@
 	
 
     <target name="run" depends="jar">   <!-- runs the ant file -->
-        <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+        <java jar="${jar.dir}/${ant.project.name}.jar" fork="true">
+		<arg value="${arg0}"/>
+		</java>
     </target>
 	
 
